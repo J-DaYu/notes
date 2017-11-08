@@ -12,6 +12,8 @@
 
 
 
+[TOC]
+
 ## 1. 安装 VirtualBox
 
 官网下载可视化安装包
@@ -185,6 +187,6 @@ bash init.sh
    >
    > 如果存在则修改homestead.db文件中的版本判断
 
-4. 配置完host,且已经启动box无法访问
+4. 配置完host,且已经启动box但无法访问
 
    > host中的IP地址必须与Homestead.ymal配置文件中的ip一致
