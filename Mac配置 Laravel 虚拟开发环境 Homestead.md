@@ -10,10 +10,6 @@
 
 *说明: Mac系统版本为 10.12.6* 
 
-
-
-[TOC]
-
 ## 1. 安装 VirtualBox
 
 官网下载可视化安装包
@@ -133,7 +129,9 @@ bash init.sh
 
    > `vagrant reload`
    >
-   > 注意: 如果修改了站点信息必须执行 `vagrant reload —provision`
+   > 注意: 如果修改了站点信息必须执行 `vagrant reload --provision` 
+   >
+   > *该命令必须在 Homestead 文件夹下执行*
 
 7. 其它命令
 
