@@ -52,6 +52,8 @@ chmod -R 777 cache
 composer update
 ```
 
+> 本机如果没有安装`composer`可以在虚拟机中使用该命令
+
 ## 新建 ` .evn` 项目配置文件
 
 把 ` .evn.example` 中的内容复制到 `.evn` 中,并修改为本地相关配置

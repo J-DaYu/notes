@@ -42,9 +42,11 @@ vagrant box add laravel/homestead
 
 使用git方式安装
 
-```
+```shell
 git clone https://github.com/laravel/homestead.git Homestead
 ```
+
+> 在用户根目录下clone
 
 切换到Homestead稳定版本
 
@@ -108,6 +110,8 @@ bash init.sh
 5. 启动 Vagrant Box
 
    > `vagrant up` 
+   >
+   > 该命令必须在 `Homestead`文件夹下执行
 
    > **必须首先 用 ssh-keygen 创建公钥** 
    >
@@ -137,7 +141,7 @@ bash init.sh
 
    > 关闭虚拟机 `vagrant halt`
    >
-   > 销毁虚拟机 `vagrant destory`
+   > 销毁虚拟机 `vagrant destroy`
    >
    > SSH登录 `vagrant ssh`
 
@@ -183,8 +187,29 @@ bash init.sh
 
    > 使用 `vagrant box list` 命令检查 box文件是否存在,
    >
-   > 如果存在则修改homestead.db文件中的版本判断
+   > 如果存在则修改 `scripts/homestead.rb` 文件中的版本判断
+   >
+   > `config.vm.box_version = settings["version"] ||= ">= 3.0.0"`
+   >
+   > 改为
+   >
+   > `config.vm.box_version = settings["version"] ||= ">= 0"`
 
 4. 配置完host,且已经启动box但无法访问
 
    > host中的IP地址必须与Homestead.ymal配置文件中的ip一致
+   >
+   > `Homestead.ymal`
+   >
+   > ```
+   > ip: "192.168.10.10" // host中的IP为这里对应的IP
+   > memory: 2048
+   > cpus: 1
+   > provider: virtualbox
+   > ```
+   >
+   > `host`
+   >
+   > ```
+   > 192.168.10.10 appname.app
+   > ```
