@@ -1,9 +1,3 @@
----
-sidebar: false
-prev: ./Mac里的Nginx
-next: false
----
-
 # Homebrew
 
 > [Homebrew官网](https://brew.sh/index_zh-cn)
