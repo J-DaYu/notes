@@ -1,5 +1,7 @@
 # 纯CSS实现闪电ICON
 
+![image-20180607185135109](./resource/image-20180607185135109.png)
+
 ```html
 <div class="lightning"></div>	
 ```
